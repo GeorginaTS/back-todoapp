@@ -17,6 +17,9 @@ const port = process.env.PORT || 3401
 app.get('/', (request, response) => {
     response.send(`<h1> Bon dia 😊 Listening on port ${port} </h1>`)
 })
+app.get('/api', (request, response) => {
+    response.send(`<h1> Bon dia 😊 Listening on port ${port} </h1>`)
+})
 
 app.use("/api/users", usersRouter)
 app.use("/api/todos", authenticateToken, todosRouter)
